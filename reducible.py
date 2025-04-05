@@ -158,18 +158,18 @@ def main():
     except EOFError:
         pass
     n = len(word_list)
-    # determine prime number N
-    N = 2 * n
-    while not is_prime(N):
-        N += 1
-    hash_list = [""] * N
+    # determine prime number
+    prime_number = 2 * n
+    while not is_prime(prime_number):
+        prime_number += 1
+    hash_list = [""] * prime_number
     for word in word_list:
         insert_word(word, hash_list)
     # create hash_memo
-    M = int(0.2 * n)
-    while not is_prime(M):
-        M += 1
-    hash_memo = [""] * M
+    num = int(0.2 * n)
+    while not is_prime(num):
+        num += 1
+    hash_memo = [""] * num
 
     reducible_words = []
     for word in word_list:
